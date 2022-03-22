@@ -35,6 +35,11 @@ class PermissionSeed extends Seeder
             [ 'title' => 'user_edit',],
             [ 'title' => 'user_view',],
             [ 'title' => 'user_delete',],
+            [ 'title' => 'currency_access',],
+            [ 'title' => 'currency_create',],
+            [ 'title' => 'currency_edit',],
+            [ 'title' => 'currency_view',],
+            [ 'title' => 'currency_delete',],
         ];
 
             Permission::insert($permissions);

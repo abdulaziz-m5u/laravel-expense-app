@@ -19,6 +19,7 @@ class UserSeed extends Seeder
                 'name'           => 'admin',
                 'email'          => 'admin@example.com',
                 'password'       => bcrypt('123'),
+                'currency_id' => 1,
                 'remember_token' => null,
             ],
         ];

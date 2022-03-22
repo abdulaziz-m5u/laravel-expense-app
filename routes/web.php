@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', function () {
-    return view('welcome');
+Route::get('/', function () {
+    return redirect()->route('register');
 });
 
 Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], function() {
@@ -24,6 +24,14 @@ Route::group(['middleware' => 'isAdmin','prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('permissions', \App\Http\Controllers\Admin\PermissionController::class);
     Route::resource('roles', \App\Http\Controllers\Admin\RoleController::class);
     Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
+
+    Route::resource('currencies', \App\Http\Controllers\Admin\CurrencyController::class);
+    Route::resource('expense_categories', \App\Http\Controllers\Admin\ExpenseCategoryController::class);
+    Route::resource('income_categories', \App\Http\Controllers\Admin\IncomeCategoryController::class);
+    Route::resource('expenses', \App\Http\Controllers\Admin\ExpenseController::class);
+    Route::resource('incomes', \App\Http\Controllers\Admin\IncomeController::class);
+
+    Route::resource('monthly_reports', \App\Http\Controllers\Admin\MontlyReportController::class);
 });
 
 Auth::routes();
