@@ -1,4 +1,4 @@
-# Laravel 8 - Freelance job application
+# Laravel 8 - Expense application
 
 ## Screenshots
 
